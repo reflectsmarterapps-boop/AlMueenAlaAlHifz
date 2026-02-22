@@ -615,13 +615,38 @@
     }
 
     .app-store-btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 32px;
+      background: #000;
+      border-radius: 14px;
       transition: transform 0.3s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
 
     .app-store-btn:hover { transform: scale(1.05); }
 
-    .app-store-btn img { height: 54px; }
+    .app-store-btn svg { width: 28px; height: 28px; fill: white; }
+
+    .app-store-btn-text {
+      text-align: start;
+      color: white;
+    }
+
+    .app-store-btn-sub {
+      font-size: 11px;
+      opacity: 0.8;
+      display: block;
+    }
+
+    .app-store-btn-main {
+      font-size: 20px;
+      font-weight: 700;
+      font-family: var(--font-en);
+      display: block;
+      line-height: 1.2;
+    }
 
     /* ========================================
        Footer
@@ -775,7 +800,6 @@
         <div class="hero-actions">
           <a href="#download" class="btn-primary">
             <span data-ar="حمّل التطبيق" data-en="Download App">حمّل التطبيق</span>
-            <span></span>
           </a>
           <a href="#features" class="btn-secondary">
             <span data-ar="اكتشف المزايا" data-en="Explore Features">اكتشف المزايا</span>
@@ -874,7 +898,11 @@
   <section class="cta-section" id="download">
     <p class="cta-text" data-ar="ابدأ رحلتك في حفظ القرآن الكريم اليوم" data-en="Start your Quran memorization journey today">ابدأ رحلتك في حفظ القرآن الكريم اليوم</p>
     <a href="https://apps.apple.com/app/id6758395448" class="app-store-btn" target="_blank" rel="noopener">
-      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ar-sa/250x83" alt="حمّل من App Store" id="app-store-badge">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <div class="app-store-btn-text">
+        <span class="app-store-btn-sub" data-ar="حمّل من" data-en="Download on the">حمّل من</span>
+        <span class="app-store-btn-main">App Store</span>
+      </div>
     </a>
   </section>
 
@@ -882,7 +910,7 @@
   <footer class="footer">
     <div class="footer-links">
       <a href="privacy-policy.html" class="footer-link" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
-      <a href="mailto:almueen.app@gmail.com" class="footer-link" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
+      <a href="mailto:reflect.smarterapps@gmail.com" class="footer-link" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
     </div>
     <p class="footer-text">&copy; 2025 Al Mueen Ala Al Hifz. <span data-ar="جميع الحقوق محفوظة." data-en="All rights reserved.">جميع الحقوق محفوظة.</span></p>
   </footer>
@@ -920,13 +948,6 @@
       });
 
       document.querySelector('.lang-btn').textContent = currentLang === 'ar' ? 'English' : 'العربية';
-
-      // App Store badge language
-      const badge = document.getElementById('app-store-badge');
-      badge.src = currentLang === 'ar'
-        ? 'https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ar-sa/250x83'
-        : 'https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us/250x83';
-      badge.alt = currentLang === 'ar' ? 'حمّل من App Store' : 'Download on the App Store';
     }
 
     // Mobile menu
