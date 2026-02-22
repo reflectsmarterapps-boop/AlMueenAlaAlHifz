@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="سياسة الخصوصية - المعين على الحفظ">
+  <meta name="theme-color" content="#1B5E3A">
+  <title>سياسة الخصوصية - المعين على الحفظ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Kufi+Arabic:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1B5E3A;
+      --primary-dark: #0D3D24;
+      --primary-light: #2E7D52;
+      --accent: #D4AF37;
+      --accent-light: #E8C864;
+      --bg-light: #FAFAF8;
+      --bg-cream: #F5F2EC;
+      --card-bg: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #525252;
+      --text-light: #9CA3AF;
+      --text-inverse: #FFFFFF;
+      --border-light: #E5E7EB;
+      --shadow-md: 0 4px 16px rgba(27,94,58,0.12);
+      --radius-lg: 24px;
+      --font-ar: 'Noto Kufi Arabic', 'Amiri', sans-serif;
+      --font-en: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-ar);
+      background: var(--bg-light);
+      color: var(--text-primary);
+      line-height: 1.8;
+    }
+
+    html[lang="en"] body,
+    html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3,
+    html[lang="en"] p, html[lang="en"] li,
+    html[lang="en"] .nav-logo-text,
+    html[lang="en"] .nav-link,
+    html[lang="en"] .lang-btn,
+    html[lang="en"] .footer-text,
+    html[lang="en"] .footer-link {
+      font-family: var(--font-en);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* Navigation (same as index) */
+    .navbar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 14px 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-inverse);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .nav-logo-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover { color: var(--primary); }
+
+    .lang-btn {
+      padding: 6px 16px;
+      border: 2px solid var(--primary);
+      border-radius: 20px;
+      background: transparent;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: var(--font-en);
+    }
+
+    .lang-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    /* Header */
+    .page-header {
+      background: linear-gradient(160deg, var(--primary-dark), var(--primary), var(--primary-light));
+      padding: 60px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: var(--bg-light);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    .page-header h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      color: var(--text-inverse);
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-header .update-date {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Content */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .policy-section {
+      margin-bottom: 40px;
+    }
+
+    .policy-section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(27,94,58,0.1);
+    }
+
+    .policy-section p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+      line-height: 1.9;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    .policy-section ul li {
+      font-size: 16px;
+      color: var(--text-secondary);
+      padding: 6px 0;
+      padding-right: 20px;
+      position: relative;
+      line-height: 1.9;
+    }
+
+    html[dir="ltr"] .policy-section ul li {
+      padding-right: 0;
+      padding-left: 20px;
+    }
+
+    .policy-section ul li::before {
+      content: '●';
+      color: var(--accent);
+      font-size: 8px;
+      position: absolute;
+      right: 0;
+      top: 12px;
+    }
+
+    html[dir="ltr"] .policy-section ul li::before {
+      right: auto;
+      left: 0;
+    }
+
+    .highlight-box {
+      background: rgba(27,94,58,0.04);
+      border-right: 4px solid var(--primary);
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 20px 0;
+    }
+
+    html[dir="ltr"] .highlight-box {
+      border-right: none;
+      border-left: 4px solid var(--primary);
+      border-radius: 12px 0 0 12px;
+    }
+
+    .highlight-box p {
+      color: var(--text-primary);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      text-align: center;
+      margin-top: 40px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .contact-card a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover { color: var(--accent); }
+
+    .footer-text {
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">م</div>
+        <span class="nav-logo-text" data-ar="المعين على الحفظ" data-en="Al Mueen">المعين على الحفظ</span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+        <li><button class="lang-btn" onclick="toggleLang()">English</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="page-header">
+    <h1 data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</h1>
+    <p class="update-date" data-ar="آخر تحديث: فبراير ٢٠٢٦" data-en="Last updated: February 2026">آخر تحديث: فبراير ٢٠٢٦</p>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Intro -->
+    <div class="policy-section">
+      <p data-ar="مرحباً بكم في تطبيق المعين على الحفظ. نحن نحترم خصوصيتكم ونلتزم بحماية بياناتكم الشخصية. توضّح هذه السياسة كيف يتعامل التطبيق مع معلوماتكم." data-en="Welcome to Al Mueen Ala Al Hifz. We respect your privacy and are committed to protecting your personal data. This policy explains how the app handles your information.">مرحباً بكم في تطبيق المعين على الحفظ. نحن نحترم خصوصيتكم ونلتزم بحماية بياناتكم الشخصية. توضّح هذه السياسة كيف يتعامل التطبيق مع معلوماتكم.</p>
+    </div>
+
+    <!-- Data Collection -->
+    <div class="policy-section">
+      <h2 data-ar="جمع البيانات" data-en="Data Collection">جمع البيانات</h2>
+      <div class="highlight-box">
+        <p data-ar="لا يقوم التطبيق بجمع أو إرسال أو مشاركة أي بيانات شخصية مع أي جهة خارجية." data-en="The app does not collect, transmit, or share any personal data with any third party.">لا يقوم التطبيق بجمع أو إرسال أو مشاركة أي بيانات شخصية مع أي جهة خارجية.</p>
+      </div>
+      <p data-ar="جميع بياناتكم — بما في ذلك المحفوظات والوسوم وجداول المراجعة والإعدادات — تُخزَّن محلياً على جهازكم فقط ولا تُرسَل إلى أي خادم." data-en="All your data — including memorizations, tags, review schedules, and settings — is stored locally on your device only and is never sent to any server.">جميع بياناتكم — بما في ذلك المحفوظات والوسوم وجداول المراجعة والإعدادات — تُخزَّن محلياً على جهازكم فقط ولا تُرسَل إلى أي خادم.</p>
+    </div>
+
+    <!-- Account -->
+    <div class="policy-section">
+      <h2 data-ar="الحساب والتسجيل" data-en="Account & Registration">الحساب والتسجيل</h2>
+      <p data-ar="لا يتطلب التطبيق إنشاء حساب أو تسجيل دخول أو تقديم أي معلومات شخصية مثل الاسم أو البريد الإلكتروني أو رقم الهاتف." data-en="The app does not require account creation, login, or any personal information such as name, email, or phone number.">لا يتطلب التطبيق إنشاء حساب أو تسجيل دخول أو تقديم أي معلومات شخصية مثل الاسم أو البريد الإلكتروني أو رقم الهاتف.</p>
+    </div>
+
+    <!-- Local Storage -->
+    <div class="policy-section">
+      <h2 data-ar="التخزين المحلي" data-en="Local Storage">التخزين المحلي</h2>
+      <p data-ar="يستخدم التطبيق تخزيناً محلياً على جهازكم لحفظ:" data-en="The app uses local storage on your device to save:">يستخدم التطبيق تخزيناً محلياً على جهازكم لحفظ:</p>
+      <ul>
+        <li data-ar="محفوظاتكم القرآنية وتقدّم المراجعة" data-en="Your Quran memorizations and review progress">محفوظاتكم القرآنية وتقدّم المراجعة</li>
+        <li data-ar="الوسوم وتصنيفات المحفوظات" data-en="Tags and memorization categories">الوسوم وتصنيفات المحفوظات</li>
+        <li data-ar="جداول المراجعة والتذكيرات" data-en="Review schedules and reminders">جداول المراجعة والتذكيرات</li>
+        <li data-ar="إعداداتكم (النسق، الرواية، القارئ، حجم الخط، اللغة)" data-en="Your settings (theme, riwaya, reciter, font size, language)">إعداداتكم (النسق، الرواية، القارئ، حجم الخط، اللغة)</li>
+        <li data-ar="ملفات الصوت المحفوظة مؤقتاً للاستماع بدون إنترنت" data-en="Cached audio files for offline listening">ملفات الصوت المحفوظة مؤقتاً للاستماع بدون إنترنت</li>
+      </ul>
+      <p data-ar="يمكنكم حذف جميع بياناتكم في أي وقت بحذف التطبيق من جهازكم." data-en="You can delete all your data at any time by removing the app from your device.">يمكنكم حذف جميع بياناتكم في أي وقت بحذف التطبيق من جهازكم.</p>
+    </div>
+
+    <!-- Internet -->
+    <div class="policy-section">
+      <h2 data-ar="الاتصال بالإنترنت" data-en="Internet Connection">الاتصال بالإنترنت</h2>
+      <p data-ar="يستخدم التطبيق الاتصال بالإنترنت فقط لغرض واحد:" data-en="The app uses internet connection for one purpose only:">يستخدم التطبيق الاتصال بالإنترنت فقط لغرض واحد:</p>
+      <ul>
+        <li data-ar="بث ملفات التلاوة الصوتية من موقع EveryAyah.com عند الاستماع للقرآن الكريم" data-en="Streaming audio recitation files from EveryAyah.com when listening to Quran recitations">بث ملفات التلاوة الصوتية من موقع EveryAyah.com عند الاستماع للقرآن الكريم</li>
+      </ul>
+      <p data-ar="لا يُرسِل التطبيق أي بيانات شخصية عبر الإنترنت. جميع الوظائف الأخرى تعمل بدون اتصال بالإنترنت." data-en="The app does not send any personal data over the internet. All other features work fully offline.">لا يُرسِل التطبيق أي بيانات شخصية عبر الإنترنت. جميع الوظائف الأخرى تعمل بدون اتصال بالإنترنت.</p>
+    </div>
+
+    <!-- Notifications -->
+    <div class="policy-section">
+      <h2 data-ar="التنبيهات" data-en="Notifications">التنبيهات</h2>
+      <p data-ar="قد يطلب التطبيق إذن إرسال التنبيهات لتذكيركم بمواعيد المراجعة. هذا الإذن اختياري تماماً ويمكنكم رفضه أو تعطيله لاحقاً من إعدادات الجهاز. التنبيهات تُجدوَل محلياً على جهازكم ولا تمرّ عبر أي خادم." data-en="The app may request notification permission to remind you of review times. This permission is entirely optional and can be declined or disabled later from device settings. Notifications are scheduled locally on your device and do not pass through any server.">قد يطلب التطبيق إذن إرسال التنبيهات لتذكيركم بمواعيد المراجعة. هذا الإذن اختياري تماماً ويمكنكم رفضه أو تعطيله لاحقاً من إعدادات الجهاز. التنبيهات تُجدوَل محلياً على جهازكم ولا تمرّ عبر أي خادم.</p>
+    </div>
+
+    <!-- Analytics & Ads -->
+    <div class="policy-section">
+      <h2 data-ar="التحليلات والإعلانات" data-en="Analytics & Advertising">التحليلات والإعلانات</h2>
+      <div class="highlight-box">
+        <p data-ar="لا يحتوي التطبيق على أي أدوات تحليل أو تتبع أو إعلانات. لا نستخدم أي خدمات طرف ثالث لجمع البيانات." data-en="The app contains no analytics, tracking tools, or advertisements. We do not use any third-party services for data collection.">لا يحتوي التطبيق على أي أدوات تحليل أو تتبع أو إعلانات. لا نستخدم أي خدمات طرف ثالث لجمع البيانات.</p>
+      </div>
+    </div>
+
+    <!-- Export/Import -->
+    <div class="policy-section">
+      <h2 data-ar="تصدير واستيراد البيانات" data-en="Data Export & Import">تصدير واستيراد البيانات</h2>
+      <p data-ar="يوفّر التطبيق ميزة تصدير واستيراد البيانات. عند التصدير، يتم إنشاء ملف على جهازكم يمكنكم حفظه أو مشاركته حسب اختياركم. التطبيق لا يرسل هذا الملف تلقائياً لأي جهة." data-en="The app provides data export and import features. When exporting, a file is created on your device that you can save or share at your discretion. The app does not automatically send this file to any party.">يوفّر التطبيق ميزة تصدير واستيراد البيانات. عند التصدير، يتم إنشاء ملف على جهازكم يمكنكم حفظه أو مشاركته حسب اختياركم. التطبيق لا يرسل هذا الملف تلقائياً لأي جهة.</p>
+    </div>
+
+    <!-- Children -->
+    <div class="policy-section">
+      <h2 data-ar="خصوصية الأطفال" data-en="Children's Privacy">خصوصية الأطفال</h2>
+      <p data-ar="بما أن التطبيق لا يجمع أي بيانات شخصية، فهو آمن للاستخدام من قِبل جميع الفئات العمرية بما في ذلك الأطفال." data-en="Since the app does not collect any personal data, it is safe for use by all age groups including children.">بما أن التطبيق لا يجمع أي بيانات شخصية، فهو آمن للاستخدام من قِبل جميع الفئات العمرية بما في ذلك الأطفال.</p>
+    </div>
+
+    <!-- Changes -->
+    <div class="policy-section">
+      <h2 data-ar="تحديثات السياسة" data-en="Policy Updates">تحديثات السياسة</h2>
+      <p data-ar="قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تعديلات على هذه الصفحة مع تحديث تاريخ آخر تعديل." data-en="We may update this privacy policy from time to time. Any changes will be posted on this page with an updated modification date.">قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تعديلات على هذه الصفحة مع تحديث تاريخ آخر تعديل.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h3 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h3>
+      <p data-ar="لأي أسئلة حول سياسة الخصوصية، يمكنكم التواصل معنا عبر:" data-en="For any questions about this privacy policy, you can contact us at:">لأي أسئلة حول سياسة الخصوصية، يمكنكم التواصل معنا عبر:</p>
+      <p><a href="mailto:almueen.app@gmail.com">almueen.app@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="mailto:almueen.app@gmail.com" class="footer-link" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
+    </div>
+    <p class="footer-text">&copy; 2025 Al Mueen Ala Al Hifz. <span data-ar="جميع الحقوق محفوظة." data-en="All rights reserved.">جميع الحقوق محفوظة.</span></p>
+  </footer>
+
+  <script>
+    let currentLang = 'ar';
+
+    function toggleLang() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      const html = document.documentElement;
+      html.lang = currentLang;
+      html.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-ar]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+
+      document.querySelector('.lang-btn').textContent = currentLang === 'ar' ? 'English' : 'العربية';
+    }
+  </script>
+</body>
+</html>
